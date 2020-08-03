@@ -1,0 +1,20 @@
+{
+  "name": "study-iframe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/studio-kakky/study-iframe.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/studio-kakky/study-iframe/issues"
+  },
+  "homepage": "https://github.com/studio-kakky/study-iframe#readme",
+  "private" true
+}
