@@ -9,6 +9,7 @@
     "watch:html": "npx cpx \"src/statics/**/*.*\" dist -wv" ,
     "watch:script": "npx cpx \"src/scripts/**/*.*\" dist -wv" ,
     "watch:style": "npx sass --watch src/styles/main.scss dist/styles.css",
+    "build": "rm -rf dist && npm run build:html && npm run build:style && npm run build:script",
     "build:html": "cp -r ./src/statics/ ./dist",
     "build:style": "npx sass src/styles/main.scss dist/styles.css",
     "build:script": "npx cpx \"src/scripts/**/*.*\" dist"
