@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "npm run watch:html & npm run watch:style",
+    "watch": "npm run watch:html & npm run watch:script & npm run watch:style",
     "watch:html": "npx cpx \"src/statics/**/*.*\" dist -wv" ,
+    "watch:script": "npx cpx \"src/scripts/**/*.*\" dist -wv" ,
     "watch:style": "npx sass --watch src/styles/main.scss dist/styles.css",
     "build:html": "cp -r ./src/statics/ ./dist",
-    "build:style": "npx sass src/styles/main.scss dist/styles.css"
+    "build:style": "npx sass src/styles/main.scss dist/styles.css",
+    "build:script": "npx cpx \"src/scripts/**/*.*\" dist"
   },
   "repository": {
     "type": "git",
