@@ -1,0 +1,12 @@
+@use 'modules/header';
+@use 'modules/form';
+@use 'modules/override-frame';
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.ContentMain {
+  padding: 20px;
+}
