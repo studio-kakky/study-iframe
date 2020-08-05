@@ -53,22 +53,9 @@ const makeCloseBtn = () => {
 
 (() => {
   window.addEventListener('DOMContentLoaded', () => {
-    const iframe = overrideFrame('form/');
+    const iframe = overrideFrame('http://http://iframe-test.studio-kakky.com/form/');
     iframe.addEventListener('load', (e) => {
-      if (!/^\/form\/complete\.html/.test(iframe.contentWindow.location.pathname)) {
-        return;
-      }
-
-      const { closeBtn, styleNode } = makeCloseBtn();
-
-      console.log(closeBtn)
-
-      closeBtn.addEventListener('click', () => {
-        iframe.parentNode.removeChild(iframe);
-      })
-
-      iframe.contentWindow.document.body.appendChild(closeBtn)
-      iframe.contentWindow.document.body.appendChild(styleNode)
+      console.log(iframe.contentWindow)
     })
   })
 })();
