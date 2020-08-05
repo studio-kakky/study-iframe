@@ -53,7 +53,7 @@ const makeCloseBtn = () => {
 
 (() => {
   window.addEventListener('DOMContentLoaded', () => {
-    const iframe = overrideFrame('http://http://iframe-test.studio-kakky.com/form/');
+    const iframe = overrideFrame('https://iframe-test.studio-kakky.com/form/');
     iframe.addEventListener('load', (e) => {
       console.log(iframe.contentWindow)
     })
