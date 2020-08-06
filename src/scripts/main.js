@@ -1,4 +1,4 @@
-const overrideFrame = url => {
+function overrideFrame (url) {
   const iFrameElement = document.createElement('iframe');
   iFrameElement.setAttribute('src', url);
   iFrameElement.classList.add('OverrideFrame');
@@ -7,10 +7,14 @@ const overrideFrame = url => {
   return iFrameElement;
 }
 
-(() => {
-  window.addEventListener('DOMContentLoaded', () => {
+(function () {
+  window.addEventListener('DOMContentLoaded', function() {
     const iframe = overrideFrame('https://iframe-test.studio-kakky.com/form/');
-    window.addEventListener('message', () => {
+    window.addEventListener('message', function (e) {
+      if (!e.data || e.data !== 'CLOSE_IFRAME_WINDOW_STUDIO_KAKKY') {
+        return;
+      }
+
       alert('iFrameを閉じます');
       iframe.parentNode.removeChild(iframe);
     })
